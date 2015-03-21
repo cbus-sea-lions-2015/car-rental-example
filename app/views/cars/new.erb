@@ -1,0 +1,14 @@
+<% if @car.errors.any? %>
+	<% @car.errors.full_messages.each do |error| %>
+	<%= error %>
+	<% end %>
+<% end %>
+
+<form method="POST" action="/cars">
+	<input type="text" name="car[year]" value="<%= @car.year%>"/>
+	<input type="text" name="car[make]" value="<%= @car.make%>"/>
+	<input type="text" name="car[model]" value="<%= @car.model%>"/>
+	<input type="text" name="car[mileage]" value="<%= @car.mileage%>"/>
+	<input type="text" name="car[cost]" value="<%= @car.cost%>"/>
+	<input type="submit" value="Create" />
+</form>

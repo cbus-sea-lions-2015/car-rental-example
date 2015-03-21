@@ -1,0 +1,13 @@
+<h1>Cars that <%= @user.name %> has rented</h1>
+<ul>
+<% @rentals.each do |rental| %>
+<% car = rental.car %>
+<li><%= rental.start_time %></li>
+<li><%= rental.end_time %></li>
+<li><%= car.cost %></li>
+<li><%= car.make %></li>
+<li><%= car.model %></li>
+<li><%= car.year %></li>
+<li><%= car.mileage %></li>
+<% end %>
+</ul>
